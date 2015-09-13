@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.disclaimer {
+    font-size:10px;
+    font-style:italic;
+}
+
+.blockSignUp {
+    background-color:green;
+    color:white;
+    border-radius: 10px;
+    padding-left:15px;
+    padding-right:15px;
+}

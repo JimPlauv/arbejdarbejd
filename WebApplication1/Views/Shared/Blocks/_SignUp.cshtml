@@ -1,0 +1,16 @@
+﻿@if (Arbejdarbejd.Manager.UsersManager.currentUser == null)
+{
+    <div class="row blockSignUp">
+        <div class="col-xs-12 col-xs-6">
+            <h3>Bliv medlem - det er nemt og gratis!</h3>
+            <p>Det er nemt og gratis at blive medlem af Arbejdarbejd.dk, du kan starte her:</p>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            @using (Html.BeginForm("Step2", "SignUpFlow"))
+            {
+                @:Din e-mail adresse: @Html.TextBox("email") &nbsp; <input type="submit" value="Videre" />
+            }
+        </div>
+        <p class="disclaimer">Vi deler ikke din e-mail adresse, og sender dig ikke uopfordret post</p>
+    </div>
+}

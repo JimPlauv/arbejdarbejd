@@ -1,0 +1,89 @@
+﻿@model Arbejdarbejd.Models.UserModel
+
+@{
+    ViewBag.Title = "Step2";
+    Layout = "~/Views/Shared/_FromtLayoutPage.cshtml";
+}
+<div class="row">
+    <h2>Dine informationer</h2>
+
+    @using (Html.BeginForm("Step3", "SignUpFlow"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12">
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserName)
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Navn, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Navn)
+                    @Html.ValidationMessageFor(model => model.Navn)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Adresse, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Adresse)
+                    @Html.ValidationMessageFor(model => model.Adresse)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Adresse2, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Adresse2)
+                    @Html.ValidationMessageFor(model => model.Adresse2)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.By, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.By)
+                    @Html.ValidationMessageFor(model => model.By)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PostNummer, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PostNummer)
+                    @Html.ValidationMessageFor(model => model.PostNummer)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Videre" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

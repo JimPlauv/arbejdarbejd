@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gamersdaily_dk_db" Class="ArbejdArbejdDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=mssql1.unoeuro.com;Initial Catalog=gamersdaily_dk_db;User ID=gamersdaily_dk" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="gamersdaily_dk_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.aaTexts" Member="aaTexts">
+    <Type Name="aaText">
+      <Column Name="TextName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TextContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

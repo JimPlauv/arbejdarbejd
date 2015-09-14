@@ -1,19 +1,22 @@
 ﻿@if (Arbejdarbejd.Manager.UsersManager.currentUser == null)
 {
     <div class="row blockSignUp">
-        <img class="image-right" src="~/Images/Oxygen-Icons.org-Oxygen-Actions-user-group-new.ico" />
-        <div class="col-xs-12 col-xs-6">
+        <div class="col-xs-12 col-md-10">
             <div class="headline-Sign">
                 <h3>Bliv medlem - det er nemt og gratis!</h3>
             </div>
             <p>Det er nemt og gratis at blive medlem af Arbejdarbejd.dk, du kan starte her:</p>
         </div>
-        <div class="col-xs-12 col-md-6 big-form">
+        <div class="col-xs-12 col-md-10 big-form">
             @using (Html.BeginForm("Step2", "SignUpFlow"))
             {
                 @:<h4>Din e-mail adresse:</h4> <br />@Html.TextBox("email") &nbsp; <input type="submit" value="Videre" />
             }
+            <p class="disclaimer">Vi deler ikke din e-mail adresse, og sender dig ikke uopfordret post</p>
         </div>
-        <p class="disclaimer">Vi deler ikke din e-mail adresse, og sender dig ikke uopfordret post</p>
+        <div class="col-md-2 hidden-xs">
+            <img class="image-right" src="~/Images/Oxygen-Icons.org-Oxygen-Actions-user-group-new.ico" />
+        </div>
+        
     </div>
 }

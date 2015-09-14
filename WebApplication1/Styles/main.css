@@ -23,12 +23,21 @@
 
 
 .big-form input[type="text"] {
-    width: 500px;
+    width: 50%;
     height: 50px;
     margin-bottom: 10px;
     background: linear-gradient(white, #FAFAFA);
     font-size:28px;
 }
+
+.search input[type="text"] {
+    width: 100%;
+}
+
+.search input[type="submit"] {
+    width: 100%;
+}
+
 
 .big-form input[type="submit"] {
     width: 120px;

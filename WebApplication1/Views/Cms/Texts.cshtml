@@ -5,4 +5,21 @@
 }
 
 <h2>Texts</h2>
+<div class="row">
+    <div class="col-md-2 cms-left-menu">
+        Dette skal indeholde teksterne der kan redigeres
+    </div>
+    <div class="col-md-10">
+        <form>
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor.
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace('editor1');
+            </script>
+        </form>
+    </div>
+</div>
 

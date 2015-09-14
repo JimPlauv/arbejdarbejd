@@ -227,6 +227,8 @@
     <Content Include="Views\Shared\_CMSLayoutPage.cshtml" />
     <Content Include="Views\Cms\Texts.cshtml" />
     <Content Include="Views\Cms\Index.cshtml" />
+    <Content Include="Views\Shared\Blocks\_Search.cshtml" />
+    <Content Include="Views\Shared\Blocks\Text2Col.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

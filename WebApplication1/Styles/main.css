@@ -7,7 +7,8 @@
 }
 
 .blockSignUp {
-    background-color:green;
+    background: linear-gradient(green, lightgreen);
+    border:1px solid black;
     color:white;
     border-radius: 10px;
     padding-left:15px;

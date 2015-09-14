@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Styles/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Styles/main.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+            <h1>Arbejdarbejd.dk</h1>
+        </div>
+    </header>
+    <nav class="container">
+        <div class="row">
+            @Html.ActionLink("Tekster", "Texts", "CMS")
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

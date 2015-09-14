@@ -224,10 +224,12 @@
     <Content Include="Views\Frontpage\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\_SignUp.cshtml" />
     <Content Include="Views\SignUpFlow\Step2.cshtml" />
+    <Content Include="Views\Shared\_CMSLayoutPage.cshtml" />
+    <Content Include="Views\Cms\Texts.cshtml" />
+    <Content Include="Views\Cms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Cms\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

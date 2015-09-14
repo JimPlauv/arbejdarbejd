@@ -14,5 +14,10 @@ namespace Arbejdarbejd.Controllers
         {
             return View();
         }
+
+        public ActionResult Texts()
+        {
+            return View();
+        }
 	}
 }

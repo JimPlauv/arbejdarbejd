@@ -1,8 +1,9 @@
-﻿<div class="row">
+﻿@model List<WebApplication1.Models.aaText> 
+<div class="row" style="margin-top:10px; margin-bottom:10px;">
     <div class="col-md-6 col-xs-12">
-
+        @Html.Raw(Model[0].TextContent)
     </div>
     <div class="col-md-6 col-xs-12">
-
+        @Html.Raw(Model[1].TextContent)
     </div>
 </div>

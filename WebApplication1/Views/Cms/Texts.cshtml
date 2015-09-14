@@ -1,25 +1,39 @@
-﻿
+﻿@using System.Linq
+@using System.Collections.Generic
 @{
     ViewBag.Title = "Texts";
     Layout = "~/Views/Shared/_CMSLayoutPage.cshtml";
+
+    WebApplication1.Models.ArbejdArbejdDBDataContext db = new WebApplication1.Models.ArbejdArbejdDBDataContext();
+
+    WebApplication1.Models.aaText currentText = db.aaTexts.Where(i => i.TextName == Request.QueryString["text"]).SingleOrDefault();
 }
 
 <h2>Texts</h2>
 <div class="row">
     <div class="col-md-2 cms-left-menu">
-        Dette skal indeholde teksterne der kan redigeres
+        @foreach (WebApplication1.Models.aaText item in db.aaTexts.ToList())
+        {
+            @:<a href="?text=@item.TextName">@item.TextName</a>
+        }
     </div>
     <div class="col-md-10">
-        <form>
-            <textarea name="editor1" id="editor1" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
-            </textarea>
-            <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace('editor1');
-            </script>
-        </form>
+        @if (currentText != null) 
+        { 
+            <form method="post">
+                <input type="hidden" name="textId" value="@currentText.TextName" />
+                <textarea name="editor1" id="editor1" rows="10" cols="80">
+                    @currentText.TextContent
+                </textarea>
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor
+                    // instance, using default configuration.
+                    CKEDITOR.replace('editor1');
+                </script>
+                <br />
+                <input type="submit" value="Publicer" />
+            </form>
+        }
     </div>
 </div>
 

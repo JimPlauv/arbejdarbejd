@@ -1,7 +1,15 @@
 ﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_FromtLayoutPage.cshtml";
+
+    WebApplication1.Models.ArbejdArbejdDBDataContext db = new WebApplication1.Models.ArbejdArbejdDBDataContext();
+    
+    List<WebApplication1.Models.aaText> texts = new List<WebApplication1.Models.aaText>();
+
+    texts.Add(db.aaTexts.Where(i => i.TextName == "FrontPage_FindWork").SingleOrDefault());
+    texts.Add(db.aaTexts.Where(i => i.TextName == "FrontPage_GetWork").SingleOrDefault());
+    
 }
 @{Html.RenderPartial("~/Views/Shared/Blocks/_Search.cshtml");}
-@{Html.RenderPartial("~/Views/Shared/Blocks/Text2Col.cshtml");}
+@{Html.RenderPartial("~/Views/Shared/Blocks/Text2Col.cshtml", texts);}
 @{Html.RenderPartial("~/Views/Shared/Blocks/_SignUp.cshtml");}

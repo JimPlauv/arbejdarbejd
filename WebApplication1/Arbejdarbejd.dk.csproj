@@ -232,6 +232,7 @@
     <Content Include="Views\Cms\Index.cshtml" />
     <Content Include="Views\Shared\Blocks\_Search.cshtml" />
     <Content Include="Views\Shared\Blocks\Text2Col.cshtml" />
+    <Content Include="Views\Cms\Categories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

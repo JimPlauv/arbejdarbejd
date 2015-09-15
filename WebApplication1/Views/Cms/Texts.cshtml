@@ -14,12 +14,14 @@
     <div class="col-md-2 cms-left-menu">
         @foreach (WebApplication1.Models.aaText item in db.aaTexts.ToList())
         {
-            @:<a href="?text=@item.TextName">@item.TextName</a>
+            @:<a href="?text=@item.TextName">@item.TextName</a><br/>
         }
     </div>
     <div class="col-md-10">
         @if (currentText != null) 
         { 
+            <h3>@currentText.TextName</h3>
+            <p>@ViewBag.Update</p>
             <form method="post">
                 <input type="hidden" name="textId" value="@currentText.TextName" />
                 <textarea name="editor1" id="editor1" rows="10" cols="80">

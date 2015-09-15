@@ -167,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Texts.cs" />
     <Compile Include="Manager\Users.cs" />
     <Compile Include="Models\ArbejdArbejdDB.designer.cs">
       <AutoGen>True</AutoGen>

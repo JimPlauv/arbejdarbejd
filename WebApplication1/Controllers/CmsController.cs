@@ -29,6 +29,8 @@ namespace Arbejdarbejd.Controllers
 
             db.SubmitChanges();
 
+            ViewBag.Update = "Teksten blev opdateret.";
+
             return View();
         }
 	}

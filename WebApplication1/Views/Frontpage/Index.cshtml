@@ -6,8 +6,8 @@
     
     List<WebApplication1.Models.aaText> texts = new List<WebApplication1.Models.aaText>();
 
-    texts.Add(db.aaTexts.Where(i => i.TextName == "FrontPage_FindWork").SingleOrDefault());
-    texts.Add(db.aaTexts.Where(i => i.TextName == "FrontPage_GetWork").SingleOrDefault());
+    texts.Add(Arbejdarbejd.Manager.Texts.GetText("FrontPage_FindWork"));
+    texts.Add(Arbejdarbejd.Manager.Texts.GetText("FrontPage_GetWork"));
     
 }
 @{Html.RenderPartial("~/Views/Shared/Blocks/_Search.cshtml");}
